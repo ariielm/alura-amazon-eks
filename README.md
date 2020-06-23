@@ -1,7 +1,7 @@
 # Amazon EKS: Gerenciando aplicações conteinerizadas com Kubernetes
 ##### https://cursos.alura.com.br/course/amazon-eks-kubernetes
 
-## Pré-gerequisitos
+## Pré-requisitos
 * Kubernetes
 * AWS CLI
 * eksctl
@@ -47,7 +47,7 @@ Após o cluster ter sido criado, é preciso criar os nodes workers para então s
 
 Para agilizar o processo, será utilizado novamente o CloudFormation para que as instâncias sejam criadas de forma mais ágil.
 
-No ClouFormation então, criar as instâncias necessárias através do seguinte arquivo de configuração:
+No CloudFormation então, criar as instâncias necessárias através do seguinte arquivo de configuração:
 
  `https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2018-12-10/amazon-eks-nodegroup.yaml`
  
