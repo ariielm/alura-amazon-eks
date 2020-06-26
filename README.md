@@ -4,7 +4,6 @@
 ## Pré-requisitos
 * Kubernetes
 * AWS CLI
-* eksctl
 
 ## Primeiros passos - VPC
 Antes de criar um cluster k8s através da Amazon EKS (Elastic Kubernetes Service), primeiramente, deve-se criar no **IAM** uma **Role** para termos autorização de **criar e gerenciar um cluster k8s**.
@@ -49,7 +48,7 @@ Para agilizar o processo, será utilizado novamente o CloudFormation para que as
 
 No CloudFormation então, criar as instâncias necessárias através do seguinte arquivo de configuração:
 
- `https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2018-12-10/amazon-eks-nodegroup.yaml`
+`https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2018-12-10/amazon-eks-nodegroup.yaml`
  
 Após selecionar a stack a ser criada através do arquivo acima, se atentar aos passos abaixo:
 
