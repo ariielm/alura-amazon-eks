@@ -8,6 +8,8 @@
 ## Primeiros passos - VPC
 Antes de criar um cluster k8s através da Amazon EKS (Elastic Kubernetes Service), primeiramente, deve-se criar no **IAM** uma **Role** para termos autorização de **criar e gerenciar um cluster k8s**.
 
+Acessando o IAM, entrar no item de Role, selecionar a opção de criação. Em seguida selecionar o item EKS, o use case *EKS - Cluster*, e na última parte preencher somente o nome (a Policy necessária é a *AmazonEKSClusterPolicy*). Essa Role será usada na criação do EKS cluster.
+
 Após isso, como a própria AWS sugere, é preciso criar uma **VPC (Virtual Private Cloud)** para que o cluster utilize uma rede privada e segura.
 
 Neste curso, para simplificar e manter o foco apenas no EKS, a VPC é criada através do **Amazon CloudFormation**, que é basicamente um serviço de criação de VPC via arquivo json/yaml. Para o curso, a VPC é criada através do arquivo yaml:
@@ -16,7 +18,7 @@ Neste curso, para simplificar e manter o foco apenas no EKS, a VPC é criada atr
 
 ## Criando o cluster
 
-Para se criar o cluster através do CLI, é utilizado o comando:
+Para se criar o cluster através do CLI, primeiro acesse a Role criada no passo anterior e copie sua Role ARN, e então utilize o comando:
 
 ```
 aws eks create-cluster --name <cluster_name> \
